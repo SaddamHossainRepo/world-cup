@@ -1,9 +1,11 @@
+/* body */
 body{
     max-width: 800px;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     /* border: 1px solid plum; */
 }
+/* header */
 .header{
     display: flex;
     background-color: #161616;
@@ -16,6 +18,9 @@ body{
     margin-left: 50px;
     
 }
+/* .split-2 img{
+    width: 100%;
+} */
 
 /* .split, .player-1{
     margin-top: ;
@@ -29,18 +34,24 @@ body{
 .split-1 a{
     color: white;
     text-decoration: none;
+    display: block;
     /* border-radius: 5px; */
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     margin-top: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     /* border: 1px solid white; */
-    width: 400px;
-    height: 70px; 
+    width: 130px;
+    height: 40px; 
+    border-radius: 5px;
     background-color: #DD0000;
 }
 .watch-live-btn{
     margin-top: 900px;
 }
+/* main section */
 .main-section{
     display: flex;
     margin-top: 30px;
@@ -58,6 +69,7 @@ body{
 .upcoming{
     margin-top: 20px;
     text-align: center;
+    
    
 }
 #upcoming{
@@ -91,6 +103,10 @@ body{
     gap: 10px;
     
 }
+.icon{
+    display: flex;
+    justify-content: space-between
+}
 .player{
     padding: 5px;
     border-radius: 5px;
@@ -111,6 +127,7 @@ body{
     text-decoration: none;
     color: gray;
 }
+/* footer */
 .footer{
     margin-top: 80px;
     width: 100%;
@@ -142,4 +159,61 @@ body{
     color: #B9B9B9;
     font-size: 16px;
     font-weight: 500;
+}
+
+/* smaller device  */
+/* mobile */
+@media screen and (max-width: 576px) {
+    .header{
+        flex-direction: column;
+    }
+    .header img{
+        width: 100%;
+    }
+    .transfer{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .main-section{
+        flex-direction: column;
+    }
+    .upcoming{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .extra-info{
+        flex-direction: column;
+        
+    }
+    .footer{
+        height: 100%;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 577px) and (max-width:992px) {
+    .transfer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-section{
+        flex-direction: column;
+    }
+    .upcoming{
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .extra-info{
+        flex-direction: column;
+        /* margin-top: 500px; */
+    }
+    .footer{
+        height: 100%;
+    }
+    
 }
